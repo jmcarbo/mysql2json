@@ -4,7 +4,6 @@ import json
 import datetime
 import pymysql
 
-
 # Define a class to encode values to a json representation
 class CustomEncoder(json.JSONEncoder):
    def default(self, obj):
@@ -53,7 +52,7 @@ connection = pymysql.connect(**params)
 with connection.cursor() as cursor:
    cursor.execute(args.query)
    for result in cursor:
-      print(result)
+      print(json.dumps(result, cls=CustomEncoder))
       """
       print(
          transformer.transform(
