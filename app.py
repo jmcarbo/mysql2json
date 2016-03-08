@@ -1,5 +1,4 @@
 import argparse
-from jq import jq
 import json
 import datetime
 import pymysql
@@ -24,7 +23,6 @@ parser.add_argument("--query_file", help="a SQL query file", type=str)
 parser.add_argument("--user", help="username", required=True, type=str)
 parser.add_argument("--password", help="password", type=str)
 parser.add_argument("--charset", help="character set", type=str, default='utf8mb4')
-parser.add_argument("--jqfile", help="a jqfile", type=str, default='utf8mb4')
 
 # Parse the cli flags
 args = parser.parse_args()
@@ -61,23 +59,11 @@ if query == None:
 # Instantiate connection
 connection = pymysql.connect(**params)
 
-# Compile the JQ script
-# transformer = jq(open('./script.jq').read())
-
 # Execute the query and iterate over the results
 with connection.cursor() as cursor:
    cursor.execute(query)
    for result in cursor:
       print(json.dumps(result, cls=CustomEncoder))
-      """
-      print(
-         transformer.transform(
-            text=json.dumps(
-               result, cls=CustomEncoder),
-               text_output=True
-            )
-         )
-         """
 
 # Close the database connection
 connection.close()
