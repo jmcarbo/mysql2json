@@ -1,4 +1,4 @@
-# mysql2python
+# mysql2json
 
 Connects to a MySQL database and returns JSON formatted records
 
