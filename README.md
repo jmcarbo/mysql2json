@@ -4,8 +4,8 @@ Connects to a MySQL database and returns JSON formatted records
 
 ### Usage
 ```
-python ./app.py -h
-usage: app.py [-h] [--host HOST] [--port PORT] --database DATABASE
+python app -h
+usage: python app [-h] [--host HOST] [--port PORT] --database DATABASE
               [--query QUERY] [--query_file QUERY_FILE] --user USER
               [--password PASSWORD] [--charset CHARSET]
 
