@@ -1,11 +1,6 @@
 FROM python:3.5
 
-RUN apt-get update && apt-get install -y \
-    autoconf \
-    bison \
-    build-essential \
-    flex \
-    libtool
+MAINTAINER Arturo Mejia (github:arturom)
 
 WORKDIR /root/app
 
