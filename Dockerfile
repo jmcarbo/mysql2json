@@ -8,6 +8,6 @@ COPY requirements.txt /tmp/
 
 RUN pip install --requirement /tmp/requirements.txt
 
-COPY app.py /root/app/
+COPY app /root/app/
 
-ENTRYPOINT ["python","/root/app/app.py"]
+ENTRYPOINT ["python","/root/app/app"]
