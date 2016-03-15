@@ -24,7 +24,7 @@ optional arguments:
 
 ### Sample Usage
 ```bash
-python app
+python app \
   --host="localhost" \
   --port="3306" \
   --database="my_database" \
