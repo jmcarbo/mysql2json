@@ -21,3 +21,8 @@ optional arguments:
   --password PASSWORD   password
   --charset CHARSET     character set 
 ```
+
+### Sample Usage
+```bash
+python app --host="localhost" --port="3306" --database="my_database" --user="root" --password="$password" --query="SELECT * FROM USERS WHERE ID >= 100" --charset="utf8mb4"
+```
