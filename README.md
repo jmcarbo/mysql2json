@@ -1,6 +1,6 @@
 # mysql2json
 
-Connects to a MySQL database and returns JSON formatted records
+Connects to a MySQL database and prints JSON formatted records to STDOUT
 
 ### Usage
 ```
